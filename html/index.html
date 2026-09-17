@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hadiah Ulang Tahun Untuk Om 💗</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9ecf,
+            #d59aff,
+            #ffb6dc
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   SPARKLE
+===================================================== */
+
+.sparkle {
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: .7;
+
+    animation:
+        twinkle 2s infinite alternate;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    width: 92%;
+    max-width: 430px;
+
+    min-height: 550px;
+
+    padding: 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.25);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.2);
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 10;
+
+    /*
+       Boleh keluar sedikit dari card
+       karena tombol nomor 2 bisa pindah
+    */
+    overflow: visible;
+}
+
+
+/* =====================================================
+   SLIDE
+===================================================== */
+
+.slide {
+
+    display: none;
+
+    animation:
+        fade .5s ease;
+
+}
+
+.slide.active {
+
+    display: block;
+
+}
+
+@keyframes fade {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+h1 {
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+}
+
+h2 {
+
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+}
+
+p {
+
+    color: white;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button {
+
+    border: none;
+
+    padding:
+        13px 22px;
+
+    margin:
+        8px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #d94c9b;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.15);
+
+    transition:
+        .2s;
+
+    position: relative;
+
+    z-index: 20;
+
+}
+
+button:active {
+
+    transform:
+        scale(.95);
+
+}
+
+
+/* tombol lanjut */
+
+.next-btn {
+
+    background:
+        #ff5ca8;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   FOTO
+===================================================== */
+
+.photo-box {
+
+    width: 100%;
+
+    height: 220px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.3);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    margin:
+        15px 0;
+
+    overflow: hidden;
+
+}
+
+
+/* kalau nanti pakai gambar */
+
+.photo-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+}
+
+
+/* =====================================================
+   PROGRESS DOT
+===================================================== */
+
+.progress {
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 0;
+
+    right: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    z-index: 30;
+
+}
+
+.dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    background:
+        rgba(255,255,255,.5);
+
+    border-radius: 50%;
+
+}
+
+.dot.active {
+
+    background: white;
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 15px;
+
+    right: 15px;
+
+    z-index: 100000;
+
+    padding:
+        10px 15px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   =====================================================
+   NOMOR 1
+   KAIL PANCING
+   =====================================================
+===================================================== */
+
+
+/*
+   Kail
+*/
+
+#hook {
+
+    position: fixed;
+
+    font-size: 48px;
+
+    z-index: 99999;
+
+    display: none;
+
+    left: 50%;
+
+    top: -80px;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        top .8s ease;
+
+    pointer-events: none;
+
+}
+
+
+/*
+   Benang pancing
+*/
+
+#hookLine {
+
+    position: fixed;
+
+    width: 3px;
+
+    background: white;
+
+    z-index: 99998;
+
+    display: none;
+
+    top: 0;
+
+    height: 0;
+
+    transition:
+        height .8s ease;
+
+    pointer-events: none;
+
+}
+
+
+/*
+   Tombol yang kena kail
+*/
+
+.hooked {
+
+    position: fixed !important;
+
+    z-index: 99997 !important;
+
+    transition:
+
+        top 1.3s
+        cubic-bezier(.4,0,.2,1),
+
+        transform 1.3s ease,
+
+        opacity .3s ease;
+
+}
+
+
+/* =====================================================
+   =====================================================
+   NOMOR 2
+   TOMBOL PINDAH-PINDAH
+   =====================================================
+===================================================== */
+
+
+/*
+   Kedua tombol salah
+   TETAP ADA
+*/
+
+.runaway {
+
+    position: relative;
+
+    z-index: 9999;
+
+    transition:
+
+        left .4s ease,
+
+        top .4s ease,
+
+        transform .4s ease;
+
+}
+
+
+/*
+   Penting:
+   tidak ada display:none
+   di sini.
+*/
+
+
+/* =====================================================
+   =====================================================
+   NOMOR 3
+   API
+   =====================================================
+===================================================== */
+
+.fire-container {
+
+    position: fixed;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    display: none;
+
+    width: 10px;
+
+    height: 10px;
+
+}
+
+
+/*
+   Semua api
+*/
+
+.fire {
+
+    position: absolute;
+
+    font-size: 38px;
+
+    opacity: 0;
+
+}
+
+
+/*
+   Saat aktif
+*/
+
+.fire.active {
+
+    opacity: 1;
+
+    animation:
+        firePop .18s infinite alternate;
+
+}
+
+
+/*
+   Api bagian atas
+*/
+
+.fire:nth-child(1) {
+
+    left: -80px;
+    top: -70px;
+
+}
+
+.fire:nth-child(2) {
+
+    left: -40px;
+    top: -90px;
+
+}
+
+.fire:nth-child(3) {
+
+    left: 0;
+    top: -100px;
+
+}
+
+.fire:nth-child(4) {
+
+    left: 40px;
+    top: -90px;
+
+}
+
+.fire:nth-child(5) {
+
+    left: 80px;
+    top: -65px;
+
+}
+
+
+/*
+   Api samping kiri
+*/
+
+.fire:nth-child(6) {
+
+    left: -100px;
+    top: -20px;
+
+}
+
+.fire:nth-child(7) {
+
+    left: -110px;
+    top: 25px;
+
+}
+
+.fire:nth-child(8) {
+
+    left: -80px;
+    top: 65px;
+
+}
+
+
+/*
+   Api bagian bawah
+*/
+
+.fire:nth-child(9) {
+
+    left: -40px;
+    top: 85px;
+
+}
+
+.fire:nth-child(10) {
+
+    left: 0;
+    top: 95px;
+
+}
+
+.fire:nth-child(11) {
+
+    left: 40px;
+    top: 85px;
+
+}
+
+.fire:nth-child(12) {
+
+    left: 80px;
+    top: 60px;
+
+}
+
+
+/*
+   Api kanan
+*/
+
+.fire:nth-child(13) {
+
+    left: 105px;
+    top: 20px;
+
+}
+
+.fire:nth-child(14) {
+
+    left: 100px;
+    top: -25px;
+
+}
+
+
+/*
+   Animasi api
+*/
+
+@keyframes firePop {
+
+    from {
+
+        transform:
+            scale(.7)
+            rotate(-12deg);
+
+    }
+
+    to {
+
+        transform:
+            scale(1.25)
+            rotate(12deg);
+
+    }
+
+}
+
+
+/*
+   Tombol sedang terbakar
+*/
+
+.burning {
+
+    animation:
+        burningButton .12s infinite alternate !important;
+
+}
+
+
+@keyframes burningButton {
+
+    0% {
+
+        transform:
+            translateX(-5px)
+            rotate(-5deg)
+            scale(1);
+
+        filter:
+            brightness(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(5px)
+            rotate(5deg)
+            scale(1.05);
+
+        filter:
+            brightness(1.4);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(-4px)
+            rotate(-4deg)
+            scale(.96);
+
+        filter:
+            brightness(.8);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .card {
+
+        width: 92%;
+
+        min-height: 570px;
+
+        padding: 20px;
+
+    }
+
+    h1 {
+
+        font-size: 27px;
+
+    }
+
+    h2 {
+
+        font-size: 22px;
+
+    }
+
+    p {
+
+        font-size: 16px;
+
+    }
+
+    button {
+
+        font-size: 14px;
+
+        padding:
+            12px 18px;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SPARKLE
+===================================================== -->
+
+<script>
+
+for (
+    let i = 0;
+    i < 35;
+    i++
+) {
+
+    const s =
+        document.createElement("div");
+
+    s.className =
+        "sparkle";
+
+    s.style.left =
+        Math.random() * 100 + "vw";
+
+    s.style.top =
+        Math.random() * 100 + "vh";
+
+    s.style.animationDelay =
+        Math.random() * 2 + "s";
+
+    document.body.appendChild(s);
+
+}
+
+</script>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+>
+    🎵 Musik
+</button>
+
+
+<audio
+    id="music"
+    loop
+>
+
+    <!--
+       Kalau sudah punya musik,
+       masukkan file ke:
+
+       music/musik.mp3
+
+       lalu buka komentar di bawah.
+    -->
+
+    <!--
+    <source
+        src="music/musik.mp3"
+        type="audio/mpeg"
+    >
+    -->
+
+</audio>
+
+
+<!-- =====================================================
+     CARD UTAMA
+===================================================== -->
+
+<div class="card">
+
+
+<!-- =====================================================
+     SLIDE 1
+===================================================== -->
+
+<div class="slide active">
+
+    <h1>
+        🎁 Ada Sesuatu Buat Om 💗
+    </h1>
+
+    <p>
+
+        Tapi Om harus jawab
+        beberapa pertanyaan dulu ya
+        sebelum sampai ke intinya 😭
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Mulai 💗
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 2
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        📸 Sedikit Tentang Kita
+    </h2>
+
+    <div class="photo-box">
+
+       <img src="d:\ikulll\html\foto1.jpeg.jpeg">
+    </div>
+
+    <p>
+
+        kapan ni cobaa 🤭
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Lanjut
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 3
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        💭 Siap?
+    </h2>
+
+    <p>
+
+        Jawab jujur ya Om...
+        jangan sampai salah 😭😂
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Siap!
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 4
+     PERTANYAAN 1
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        ❓ Pertanyaan 1
+    </h2>
+
+    <p>
+
+        <b>
+            Om, mancing ke Muara Sako yuk besok?
+        </b>
+
+        🎣
+
+    </p>
+
+
+    <!-- JAWABAN BENAR -->
+
+    <button
+        onclick="nextSlide()"
+    >
+        Yuk
+    </button>
+
+
+    <!-- JAWABAN SALAH -->
+
+    <button
+        class="hook-answer"
+        onclick="hookAttack(this)"
+    >
+        Lusa la
+    </button>
+
+
+    <button
+        class="hook-answer"
+        onclick="hookAttack(this)"
+    >
+        besok bagi duit manen
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 5
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        🎣
+    </h2>
+
+    <h1>
+
+        YEYYYYY MANCING KE
+        MUARA SAKOOO!!
+
+    </h1>
+
+    <p>
+
+        Jangan lupa bawa umpun
+        sama umpan viral ya Om 😁
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Lanjut
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 6
+     PERTANYAAN 2
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        ❓ Pertanyaan 2
+    </h2>
+
+    <p>
+
+        <b>
+            Om jangan marah-marah lagi ya
+            ke Ika..
+        </b>
+
+        🤗
+
+    </p>
+
+
+    <!-- BENAR -->
+
+    <button
+        onclick="nextSlide()"
+    >
+        Iyaa
+    </button>
+
+
+    <!-- SALAH 1
+         TIDAK AKAN HILANG -->
+
+    <button
+        class="runaway"
+        onclick="runAway(this)"
+    >
+        Nggak
+    </button>
+
+
+    <!-- SALAH 2
+         TIDAK AKAN HILANG -->
+
+    <button
+        class="runaway"
+        onclick="runAway(this)"
+    >
+        nasihat itu lo, bukan marah
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 7
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        🥹
+    </h2>
+
+    <p>
+
+        Nah gitu dong Om...
+        jangan marah-marah terus 😭😂
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Lanjut
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 8
+     PERTANYAAN 3
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        ❓ Pertanyaan 3
+    </h2>
+
+    <p>
+
+        <b>
+            Om ga mau sama cewe lain kan?
+        </b>
+
+        😭
+
+    </p>
+
+
+    <!-- BENAR -->
+
+    <button
+        onclick="nextSlide()"
+    >
+        Ngga, sama Ika aja
+    </button>
+
+
+    <!-- SALAH
+         AKAN TERBAKAR -->
+
+    <button
+        onclick="burnButton(this)"
+    >
+        Aku cari cewe lain
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 9
+===================================================== -->
+
+<div class="slide">
+
+    <h1>
+        💗
+    </h1>
+
+    <p>
+
+        Nah kan jawabannya benar 😭😂
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Lanjut
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 10
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        🎂 Selamat Ulang Tahun, Om!
+    </h2>
+
+    <div class="photo-box">
+
+       <img src="d:\ikulll\html\foto2.jpeg.jpeg">
+
+    </div>
+
+    <p>
+
+        Hari ini adalah hari spesial
+        buat Om 💗
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Buka Pesan 💌
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 11
+     DOA ULANG TAHUN
+===================================================== -->
+
+<div class="slide">
+
+    <h2>
+        💌 Doa Untuk Om
+    </h2>
+
+    <p>
+
+        Selamat ulang tahun, Om! 🎂
+
+        <br><br>
+
+        Di hari ulang tahun Om ini,
+        Ika cuma mau doain semoga Om
+        selalu diberikan kesehatan,
+        umur yang panjang,
+        dan dimudahkan dalam setiap
+        urusan Om.
+
+        <br><br>
+
+        Semoga apa pun yang Om cita-citakan
+        bisa tercapai satu per satu.
+        Semoga langkah Om selalu dipermudah,
+        rezekinya dilancarkan,
+        dan Om selalu dikelilingi
+        orang-orang yang tulus. kayak ikaa hehe😅
+
+        <br><br>
+
+        Ika juga berharap semoga Om
+        tetap jadi Om yang Ika kenal,
+       sering-sering ajak ika mancing ya om, 
+
+        <br><br>
+
+        Pokoknya, semoga tahun ini
+        membawa banyak hal baik buat Om.
+        Kalau ada hari-hari yang berat,
+        semoga Om selalu punya alasan
+        untuk tetap tersenyum
+        dan semangat lagi. jangan cari tempat pelarian ke cewe lain!
+
+        <br><br>
+
+        Sekali lagi, selamat ulang tahun, Om! 🎉💗
+
+        <br>
+
+        Semoga semua doa baik yang Om harapkan,
+        satu per satu Allah kabulkan.
+
+        Aamiin 🤲🏻✨
+
+        <br><br>
+
+        — Ika ♡
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextSlide()"
+    >
+        Masih Ada Lagi 👀
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SLIDE 12
+===================================================== -->
+
+<div class="slide">
+
+    <h1>
+        🎉
+    </h1>
+
+    <h2>
+        Selamat!
+    </h2>
+
+    <p>
+
+        om baru aja dapetin website
+         yang ika bikin khusus 
+        dari tanggal 17 september
+        <br><br>
+
+        Jangan sering ragu ya
+        soalnya Ika udah capek nyari
+        alasan buat nggak bikin om ragu 😭❤️
+
+    </p>
+
+    <p>
+
+        <b>
+            Nah kan ketahuan 😭
+        </b>
+
+        <br><br>
+
+        Ika mau Om seneng, jadi diri sendiri.
+
+        <br>
+
+        Makasih udah sampai sejauh ini 💗
+
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="location.reload()"
+    >
+        🔄 Ulangi
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     KAIL
+===================================================== -->
+
+<div id="hook">
+    🪝
+</div>
+
+<div id="hookLine">
+</div>
+
+
+
+<!-- =====================================================
+     API
+===================================================== -->
+
+<div
+    class="fire-container"
+    id="fire"
+>
+
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+    <div class="fire">🔥</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PROGRESS
+===================================================== -->
+
+<div
+    class="progress"
+    id="progress"
+>
+</div>
+
+
+</div>
+<!-- END CARD -->
+
+
+
+<script>
+
+/* =====================================================
+   SLIDE SYSTEM
+===================================================== */
+
+let currentSlide = 0;
+
+const slides =
+    document.querySelectorAll(".slide");
+
+const progress =
+    document.getElementById("progress");
+
+
+/*
+   Buat titik progress
+*/
+
+for (
+    let i = 0;
+    i < slides.length;
+    i++
+) {
+
+    const dot =
+        document.createElement("div");
+
+    dot.className =
+        "dot";
+
+    progress.appendChild(dot);
+
+}
+
+
+/*
+   Update slide
+*/
+
+function updateSlide() {
+
+    slides.forEach(
+        (slide, index) => {
+
+            slide.classList.toggle(
+                "active",
+                index === currentSlide
+            );
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".dot")
+        .forEach(
+            (dot, index) => {
+
+                dot.classList.toggle(
+                    "active",
+                    index === currentSlide
+                );
+
+            }
+        );
+
+}
+
+
+/*
+   Slide berikutnya
+*/
+
+function nextSlide() {
+
+    if (
+        currentSlide <
+        slides.length - 1
+    ) {
+
+        currentSlide++;
+
+        updateSlide();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   NOMOR 1
+   KAIL TURUN DARI ATAS
+   → SAMPAI TOMBOL
+   → MENGAIT
+   → MENARIK TOMBOL
+   → BARU HILANG
+===================================================== */
+
+function hookAttack(button) {
+
+
+    /*
+       Kalau sudah pernah kena kail,
+       jangan dijalankan lagi.
+    */
+
+    if (
+        button.dataset.hooked === "true"
+    ) {
+
+        return;
+
+    }
+
+
+    button.dataset.hooked =
+        "true";
+
+
+    const hook =
+        document.getElementById("hook");
+
+    const line =
+        document.getElementById("hookLine");
+
+
+    /*
+       Ambil posisi tombol
+    */
+
+    const rect =
+        button.getBoundingClientRect();
+
+
+    const centerX =
+        rect.left +
+        (rect.width / 2);
+
+
+    /*
+       Tampilkan kail
+    */
+
+    hook.style.display =
+        "block";
+
+    hook.style.left =
+        centerX + "px";
+
+    hook.style.top =
+        "-80px";
+
+
+    /*
+       Tampilkan benang
+    */
+
+    line.style.display =
+        "block";
+
+    line.style.left =
+        centerX + "px";
+
+    line.style.top =
+        "0px";
+
+    line.style.height =
+        "0px";
+
+
+    /*
+       ==============================
+       TAHAP 1
+       KAIL TURUN DARI ATAS
+       ==============================
+    */
+
+    setTimeout(() => {
+
+        hook.style.top =
+            (rect.top - 55) + "px";
+
+
+        line.style.height =
+            Math.max(
+                0,
+                rect.top - 20
+            ) + "px";
+
+    }, 100);
+
+
+
+    /*
+       ==============================
+       TAHAP 2
+       KAIL SUDAH SAMPAI
+       ==============================
+    */
+
+    setTimeout(() => {
+
+        button.classList.add(
+            "hooked"
+        );
+
+
+        /*
+           Pastikan posisi tombol
+           tetap sama ketika dikail
+        */
+
+        button.style.left =
+            rect.left + "px";
+
+        button.style.top =
+            rect.top + "px";
+
+
+    }, 900);
+
+
+
+    /*
+       ==============================
+       TAHAP 3
+       KAIL MENARIK TOMBOL
+       ==============================
+    */
+
+    setTimeout(() => {
+
+        /*
+           Kail naik lagi
+        */
+
+        hook.style.top =
+            "-100px";
+
+
+        /*
+           Benang ikut naik
+        */
+
+        line.style.height =
+            "0px";
+
+
+        /*
+           TOMBOL IKUT DITARIK KE ATAS
+        */
+
+        button.style.top =
+            "-180px";
+
+
+        button.style.transform =
+            "rotate(-20deg) scale(.9)";
+
+
+    }, 1200);
+
+
+
+    /*
+       ==============================
+       TAHAP 4
+       SETELAH KETARIK BARU HILANG
+       ==============================
+    */
+
+    setTimeout(() => {
+
+        button.style.display =
+            "none";
+
+        hook.style.display =
+            "none";
+
+        line.style.display =
+            "none";
+
+    }, 2500);
+
+}
+
+
+
+/* =====================================================
+   NOMOR 2
+   KEDUA JAWABAN SALAH
+   PINDAH RANDOM
+   TIDAK PERNAH HILANG
+===================================================== */
+
+function runAway(button) {
+
+
+    /*
+       Jarak minimum dari tepi layar
+    */
+
+    const margin = 15;
+
+
+    /*
+       Ukuran layar
+    */
+
+    const screenWidth =
+        document.documentElement.clientWidth;
+
+    const screenHeight =
+        document.documentElement.clientHeight;
+
+
+    /*
+       Ukuran tombol
+    */
+
+    const buttonWidth =
+        button.offsetWidth;
+
+    const buttonHeight =
+        button.offsetHeight;
+
+
+    /*
+       Batas maksimum posisi X
+    */
+
+    const maxX =
+        Math.max(
+            margin,
+            screenWidth -
+            buttonWidth -
+            margin
+        );
+
+
+    /*
+       Batas maksimum posisi Y
+    */
+
+    const maxY =
+        Math.max(
+            margin,
+            screenHeight -
+            buttonHeight -
+            margin
+        );
+
+
+    /*
+       POSISI RANDOM X
+    */
+
+    const randomX =
+        Math.floor(
+            Math.random() *
+            (maxX - margin + 1)
+        ) + margin;
+
+
+    /*
+       POSISI RANDOM Y
+    */
+
+    const randomY =
+        Math.floor(
+            Math.random() *
+            (maxY - margin + 1)
+        ) + margin;
+
+
+    /*
+       PINDAHKAN TOMBOL
+    */
+
+    button.style.position =
+        "fixed";
+
+    button.style.left =
+        randomX + "px";
+
+    button.style.top =
+        randomY + "px";
+
+
+    /*
+       Sedikit miring random
+    */
+
+    const rotation =
+        Math.floor(
+            Math.random() * 21
+        ) - 10;
+
+
+    button.style.transform =
+        `rotate(${rotation}deg)`;
+
+
+    /*
+       ==========================
+       PALING PENTING:
+       TOMBOL TETAP ADA
+       ==========================
+    */
+
+    button.style.display =
+        "block";
+
+}
+
+
+
+/* =====================================================
+   NOMOR 3
+   API BANYAK
+   → MEMBAKAR TOMBOL
+   → TOMBOL HILANG
+===================================================== */
+
+function burnButton(button) {
+
+
+    /*
+       Jangan jalankan dua kali
+    */
+
+    if (
+        button.dataset.burning === "true"
+    ) {
+
+        return;
+
+    }
+
+
+    button.dataset.burning =
+        "true";
+
+
+    const fire =
+        document.getElementById("fire");
+
+
+    /*
+       Ambil posisi tombol
+    */
+
+    const rect =
+        button.getBoundingClientRect();
+
+
+    /*
+       Api berada di sekitar tombol
+    */
+
+    fire.style.left =
+        (
+            rect.left +
+            rect.width / 2
+        ) + "px";
+
+
+    fire.style.top =
+        (
+            rect.top +
+            rect.height / 2
+        ) + "px";
+
+
+    /*
+       Tampilkan api
+    */
+
+    fire.style.display =
+        "block";
+
+
+    fire.classList.add(
+        "active"
+    );
+
+
+    /*
+       Tombol mulai terbakar
+    */
+
+    button.classList.add(
+        "burning"
+    );
+
+
+    /*
+       Setelah api membakar
+       tombol mulai mengecil
+    */
+
+    setTimeout(() => {
+
+        button.style.opacity =
+            "0";
+
+        button.style.transform =
+            "scale(.5) rotate(20deg)";
+
+    }, 650);
+
+
+
+    /*
+       Setelah benar-benar terbakar,
+       tombol HILANG
+    */
+
+    setTimeout(() => {
+
+        button.style.display =
+            "none";
+
+
+        button.classList.remove(
+            "burning"
+        );
+
+
+        fire.classList.remove(
+            "active"
+        );
+
+
+        fire.style.display =
+            "none";
+
+
+    }, 1000);
+
+}
+
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById("music");
+
+
+function toggleMusic() {
+
+    if (
+        music.paused
+    ) {
+
+        music.play();
+
+    } else {
+
+        music.pause();
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START
+===================================================== */
+
+updateSlide();
+
+</script>
+
+</body>
+</html>
